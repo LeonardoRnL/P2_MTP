@@ -96,5 +96,6 @@ int trib(int n){
 	}else if(n == 2){
 		return 2;
 	}else{
-		return trib(n-1) + 2*trib(n-2) + 3*trib(n-2);	
+		return trib(n-1) + 2*trib(n-2) + 3*trib(n-3); }
+		
 }
