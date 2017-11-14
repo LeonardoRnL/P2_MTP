@@ -40,7 +40,6 @@ Questão 4:
 a. (2) 10011EBI075 : (1) 10021EEL034 : (0) 11711EAU005 
 
 b. 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -54,9 +53,9 @@ char mat[12];
 Texto;
 
 void imprime(Texto * dado, int qtde) {
-	if(qtde < N){
-	imprime(dado-1,qtde+1);
+	if(qtde > 0){
 	printf(": (%d) %s ", dado->id, dado->mat);
+	imprime(dado+1,qtde-1);
 	}
 	else printf(":\n");
 }
@@ -69,10 +68,11 @@ int main() {
 	strcpy(grupo[0].mat,"11711EAU005");
 	strcpy(grupo[1].mat,"10021EEL034");
 	strcpy(grupo[2].mat,"10011EBI075");
-	imprime(grupo+(N-1), 0);
+	imprime(grupo, N);
 	return 0;
+}
 
-c. 
+c. O resultado não é bem um erro, o problema é não entender como a recursividade funciona, que os processos mais recentes precisam finalizar primeiro para que se obtenha os resultados anteriores. Assim, quando a função chama ela mesma antes de mostrar na tela os resultados, a ordem é invertida.
 
 Questão 5:
 
