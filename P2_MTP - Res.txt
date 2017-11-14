@@ -81,7 +81,9 @@ a. Fibonacci(5) = 5
    Fibonacci(3) = 2
    Numero secreto = 61
    
-b. O primeiro comando da função cria um vetor estático (para manter o mesmo valor durante a recursividade), onde o segundo valor é 1, e todos os outros 0. 
+b. O primeiro comando da função cria um vetor estático (para manter o mesmo valor durante a recursividade), onde o segundo valor é 1, e todos os outros 0.
+Depois a variável condição é criada e pode receber o valor de 0 ou 1, dependendo do operador ||(ou), ela receberá o valor 0 (falso) somente se as duas condições forem 0, e 1 em todas as outras combinações.
+Assim, o terceiro comando utiliza a variável condicao por meio de um operador ternário, que quando verdadeiro calcula o fib(0) ou fib(1), e quando falso utiliza da recursividade para efetuar o cálculo do fib(n), n > 1.
 
 c. 
 
